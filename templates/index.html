@@ -1,28 +1,44 @@
-{% extends 'base.html' %}
+{% extends "base.html" %}
 
-{% block body %}
+{% block content %}
 
-<form action='/' method='post'>
+
+<h1>User-SignUp</h1>
+<form action="/" method="post">
+    <div class="form-group">
     <label>
         Username
-        <input type='text' name='user-name' />
+        <input type='text' name='username' />
         <span class = 'error'>{{user_name_error}} </span>
     </label>
+
+    <hr/>
+
     <label>
         Password
         <input type='password' name='password' />
         <span class = 'error'>{{password_error}}</span>
     </label>
+
+    <hr/>
+
     <label>
         Verify Password
         <input type='password' name='verify' />
         <span class = 'error'>{{verify_error}}</span>
     </label>
+
+    <hr/>
+
     <label>
-        <input name='email' />
+        Email
+        <input type='text' name='email' />
         <span type ='error'>{{email_error}}</span>
     </label>
-    <input type='submit' value='Submit Query'/>
+
+    <hr/>
+    </div>
+    <input class="btn btn-primary" type='submit' value='Submit'/>
 
 </form>
 
