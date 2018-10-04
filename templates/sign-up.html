@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block body %}
+
+<form action='/' method='post'>
+    <label>
+        Username
+        <input type='text' name='user-name' />
+        <span class = 'error'>{{user_name_error}} </span>
+    </label>
+    <label>
+        Password
+        <input type='password' name='password' />
+        <span class = 'error'>{{password_error}}</span>
+    </label>
+    <label>
+        Verify Password
+        <input type='password' name='verify' />
+        <span class = 'error'>{{verify_error}}</span>
+    </label>
+    <label>
+        <input name='email' />
+        <span type ='error'>{{email_error}}</span>
+    </label>
+    <input type='submit' value='Submit Query'/>
+
+</form>
+
+{% endblock %}
