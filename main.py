@@ -14,8 +14,20 @@ def index():
     pwd_error = ''
     ver_error = '' 
     em_error = ''
-
+    
+    u_name=''
+    p_word=''
+    v_p_word=''
+    e_mail=''
+    
+    user=''
+    pwd=''
+    ver=''
+    email=''
+    
+    
     if request.method == 'POST':
+        
         user = request.form['username']
         # Include validation for username
         #If User field is blank
@@ -53,23 +65,23 @@ def index():
         confirm_dot = 0
         if email != '':
             for char in email:            
-                if char in email == '@':
+                if char == '@':
                     confirm_at += 1
-                elif char in email == '.':
+                elif char == '.':
                     confirm_dot += 1
-        if confirm_at != 1 or confirm_dot != 1:
-            em_error="Invalid email address."
+            if confirm_at != 1 or confirm_dot != 1:
+                em_error="Invalid email address."
 
         if (un_error + pwd_error + ver_error + em_error) != '':
             return render_template('index.html', 
             user_name_error=un_error, 
             password_error=pwd_error, 
             verify_error=ver_error, 
-            email_error=em_error )    
+            email_error=em_error, u_name=user, p_word=pwd, v_p_word=ver, e_mail=email )    
         else:
             return render_template('greeting.html', uname=user)
 
-    return render_template('index.html', )
+    return render_template('index.html', u_name=user, p_word=pwd, v_p_word=ver, e_mail=email )
 
 
 
