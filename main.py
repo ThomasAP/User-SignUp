@@ -51,11 +51,12 @@ def index():
         # Include validation for email
         confirm_at = 0
         confirm_dot = 0
-        for char in email:            
-            if char in email == '@':
-                confirm_at += 1
-            elif char in email == '.':
-                confirm_dot += 1
+        if email != '':
+            for char in email:            
+                if char in email == '@':
+                    confirm_at += 1
+                elif char in email == '.':
+                    confirm_dot += 1
         if confirm_at != 1 or confirm_dot != 1:
             em_error="Invalid email address."
 
