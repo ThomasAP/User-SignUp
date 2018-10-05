@@ -9,11 +9,11 @@
             <table>
                 <tbody>
                     <tr>
-                        <td>
+                        <td></td>
                             <label for='username'>Username</label>
                         </td>
                         <td> 
-                            <input type='text' name='username' />
+                            <input type='text' name='username' value={{u_name}} >
                             <span class = 'error'>{{user_name_error}} </span>
                         </td>  
                     </tr>
@@ -22,7 +22,7 @@
                             <label for='password'>Password</label>
                         </td>
                         <td>
-                            <input type='password' name='password' />
+                            <input type='password' name='password' value={{p_word}} >
                             <span class = 'error'>{{password_error}}</span>
                         </td>
                     </tr>
@@ -31,7 +31,7 @@
                             <label for='verify'>Verify Password</label>
                         </td>
                         <td>
-                            <input type='password' name='verify' />
+                            <input type='password' name='verify' value={{v_p_word}} >
                             <span class = 'error'>{{verify_error}}</span>
                         </td>
                     </tr>
@@ -40,14 +40,14 @@
                             <label for='email'>Email (Optional)</label>
                         </td>
                         <td>
-                            <input type='text' name='email' />
-                            <span type ='error'>{{email_error}}</span>
+                            <input type='text' name='email' value={{e_mail}} >
+                            <span class ='error'>{{email_error}}</span>
                         </td>
                     </tr>
                 </tbody>
             </table>
         </div>
-        <input class="btn btn-primary" type='submit' value='Submit'/>
+        <input class="btn btn-primary" type='submit' value='Submit'>
 
     </form>
 
