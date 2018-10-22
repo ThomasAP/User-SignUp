@@ -9,21 +9,29 @@
             <table>
                 <tbody>
                     <tr>
-                        <td></td>
+                        <td>
                             <label for='username'>Username</label>
                         </td>
                         <td> 
                             <input type='text' name='username' value={{u_name}} >
-                            <span class = 'error'>{{user_name_error}} </span>
-                        </td>  
+                        </td>
                     </tr>
+                    <tr>
+                        <td colspan='4'>
+                            <span class = "error">{{user_name_error}} </span>
+                        </td>
+                    </tr>                                                                
                     <tr>
                         <td>
                             <label for='password'>Password</label>
                         </td>
                         <td>
                             <input type='password' name='password' value={{p_word}} >
-                            <span class = 'error'>{{password_error}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='4'>
+                            <span class = "error">{{password_error}}</span>
                         </td>
                     </tr>
                     <tr>
@@ -32,7 +40,11 @@
                         </td>
                         <td>
                             <input type='password' name='verify' value={{v_p_word}} >
-                            <span class = 'error'>{{verify_error}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='4'>
+                            <span class = "error">{{verify_error}}</span>
                         </td>
                     </tr>
                     <tr>
@@ -41,7 +53,11 @@
                         </td>
                         <td>
                             <input type='text' name='email' value={{e_mail}} >
-                            <span class ='error'>{{email_error}}</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan='4'>
+                            <span class ="error">{{email_error}}</span>
                         </td>
                     </tr>
                 </tbody>

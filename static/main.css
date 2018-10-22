@@ -3,6 +3,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100vw 100vh;
     color: white;
+    z-index: -1;
     }
 
 form {
@@ -15,7 +16,8 @@ form {
 
 .error {
     font-family:'Arvo','Arvo Regular', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:red;
+    color:rgb(253, 45, 45);
+    background-color: white;
 }
 
 .title {
@@ -23,7 +25,7 @@ form {
     position: absolute;
     background-color: rgba(0, 128, 0, 0.575);
     padding-top: 25px;
-    top: 160px;
+    top: 25%;
     left: 630px;
     width: 300px;
     height: 100px;
